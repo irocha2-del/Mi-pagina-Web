@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Práctica de Posiciones - CSS</title>
+        <!-- Hacemos referencia a los estilos de mi página -->
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header> <img src="fondo.webp" alt="Porsche"></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="#">👤 Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Segunda parcial</a>
+                <ul>
+                    <li><a href="practica1_p2.html">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Tercer parcial</a>
+                <ul>
+                    <li><a href="practica1_p3.html">Práctica uno</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <aside class="principal">
+            <h2>Práctica de Posiciones en CSS 📌</h2>
+            <p>
+                Esta práctica se desarrolló siguiendo la guía de 
+                <a href="https://www.freecodecamp.org/espanol/news/como-usar-la-propiedad-posicion-en-css-para-alinear-elementos/" target="_blank">freeCodeCamp</a>.
+                La propiedad <code>position</code> en CSS define cómo se posiciona un elemento en el documento.
+            </p>
+
+            <hr style="border: 1px solid #cccccc; margin: 20px 0;">
+
+            <!-- Ejercicio 1: Static -->
+            <article class="demo-box">
+                <h3>1. Position: Static (Estático)</h3>
+                <p>Es la posición por defecto de todos los elementos HTML. Sigue el flujo normal de la página y no acepta las propiedades <code>top</code>, <code>bottom</code>, <code>left</code> o <code>right</code>.</p>
+                <div class="caja-ejemplo pos-static">Caja con Position Static</div>
+            </article>
+
+            <!-- Ejercicio 2: Relative -->
+            <article class="demo-box">
+                <h3>2. Position: Relative (Relativo)</h3>
+                <p>El elemento se posiciona relativo a su ubicación normal original. Al desplazarlo con <code>top</code> o <code>left</code>, el espacio original que ocupaba se conserva.</p>
+                <div class="caja-ejemplo pos-relative">Caja con Position Relative (top: 10px, left: 20px)</div>
+            </article>
+
+            <!-- Ejercicio 3: Absolute -->
+            <article class="demo-box">
+                <h3>3. Position: Absolute (Absoluto)</h3>
+                <p>El elemento se remueve del flujo normal y se posiciona de forma absoluta respecto al contenedor padre más cercano que tenga un posicionamiento distinto a <code>static</code>.</p>
+                <div class="contenedor-padre">
+                    Contenedor Padre (Relative)
+                    <div class="caja-ejemplo pos-absolute">Caja Absolute (top: 10px, right: 10px)</div>
+                </div>
+            </article>
+
+            <!-- Ejercicio 4: Fixed -->
+            <article class="demo-box">
+                <h3>4. Position: Fixed (Fijo)</h3>
+                <p>El elemento se posiciona respecto a la ventana del navegador (viewport). Se mantiene fijo en el mismo lugar aunque el usuario desplace la página (scroll).</p>
+                <div class="caja-ejemplo pos-fixed">Caja Fixed (Esquina inferior derecha)</div>
+            </article>
+
+            <!-- Ejercicio 5: Sticky -->
+            <article class="demo-box">
+                <h3>5. Position: Sticky (Pegajoso)</h3>
+                <p>Combina <code>relative</code> y <code>fixed</code>. Se comporta como relativo hasta que se alcanza un umbral al hacer scroll, momento en el que se "pega" en la pantalla.</p>
+                <div class="caja-ejemplo pos-sticky">Caja Sticky (Se fija al hacer scroll)</div>
+            </article>
+        </aside>
+
+        <aside class="secundario">
+            <h3>Información</h3>
+            <p><strong>Asignatura:</strong> Programación en Internet I</p>
+            <p><strong>Práctica:</strong> Posicionamiento en CSS</p>
+            <p><strong>Referencia:</strong> Tutorial de freeCodeCamp</p>
+        </aside>
+    </section>
+    <footer>
+        <img src="LOGOUDC.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+    </body>
+</html>
