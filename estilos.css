@@ -1,0 +1,108 @@
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del Encabezado */
+header {
+    width: 100%;
+    height: 180px;
+}
+
+header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Estilos del menú */
+nav {
+    background-color: black;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav a:hover {
+    background-color: antiquewhite;
+    color: black;
+}
+
+/* Estilos del submenú */
+nav li ul {
+    display: none;
+    position: absolute;
+    background-color: brown;
+    min-width: 180px;
+    z-index: 1000; /* Asegura que el menú flotante quede arriba */
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+/* Estilos para el cuerpo de la página */
+section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-width: 350px;
+}
+
+.principal {
+    width: 70%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 2px solid #cccccc;
+}
+
+.secundario {
+    width: 30%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 2px solid #cccccc;
+}
+
+/* Ajuste para que las imágenes y videos no sobresalgan del contenedor */
+.principal img, 
+.principal iframe {
+    max-width: 100%;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
