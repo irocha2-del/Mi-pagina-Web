@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Práctica de Posiciones - freeCodeCamp</title>
-        <!-- Hacemos referencia a los estilos de mi página -->
         <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
@@ -33,87 +32,80 @@
     </nav>
     <section>
         <aside class="principal">
-            <h2>Práctica de Posiciones en CSS (freeCodeCamp) 📌</h2>
-            <p>
-                Demostración práctica de los 5 valores de la propiedad <code>position</code> en CSS utilizando las cajas de 100x100 px (<strong>Caja Naranja</strong> y <strong>Caja Azul</strong>) según el tutorial de 
-                <a href="https://www.freecodecamp.org/espanol/news/como-usar-la-propiedad-posicion-en-css-para-alinear-elementos/" target="_blank">freeCodeCamp</a>.
-            </p>
+            <h2>Práctica de Posiciones CSS (freeCodeCamp) 📌</h2>
+            <p>Demostración directa de las 5 reglas de posición aplicadas a cajas de 100x100 px.</p>
 
             <hr style="border: 1px solid #cccccc; margin: 20px 0;">
 
             <!-- 1. STATIC -->
-            <article class="seccion-posicion">
-                <h3>1. Position: Static (Por defecto)</h3>
-                <p>Las cajas se apilan una debajo de otra siguiendo el flujo normal del documento. Las propiedades <code>top</code>, <code>left</code>, etc., no surten efecto.</p>
-                
-                <div class="demo-container">
-                    <div class="box-orange">Caja Naranja</div>
-                    <div class="box-blue">Caja Azul</div>
+            <div class="ejercicio">
+                <h3>1. Position: Static</h3>
+                <p>Las cajas se colocan una debajo de otra en el flujo normal.</p>
+                <div class="contenedor-padre">
+                    <div class="box-orange static">Static</div>
+                    <div class="box-blue">Normal</div>
                 </div>
-            </article>
+            </div>
 
             <!-- 2. RELATIVE -->
-            <article class="seccion-posicion">
-                <h3>2. Position: Relative (Relativo a su posición original)</h3>
-                <p>La <strong>Caja Naranja</strong> tiene <code>position: relative; top: 30px; left: 40px;</code>. Se desplaza respetando su espacio original sin mover a la Caja Azul.</p>
-                
-                <div class="demo-container" style="height: 250px;">
-                    <div class="box-orange demo-relative">Caja Naranja (Relative)</div>
-                    <div class="box-blue">Caja Azul</div>
+            <div class="ejercicio">
+                <h3>2. Position: Relative</h3>
+                <p>La caja naranja aplica <code>position: relative; top: 30px; left: 40px;</code> moviéndose desde su posición original.</p>
+                <div class="contenedor-padre" style="height: 220px;">
+                    <div class="box-orange relative">Relative</div>
+                    <div class="box-blue">Normal</div>
                 </div>
-            </article>
+            </div>
 
             <!-- 3. ABSOLUTE -->
-            <article class="seccion-posicion">
-                <h3>3. Position: Absolute (Relativo a su contenedor padre)</h3>
-                <p>La <strong>Caja Naranja</strong> sale del flujo (<code>position: absolute; top: 10px; right: 10px;</code>) y se coloca respecto al contenedor gris. La Caja Azul sube al espacio que quedó libre.</p>
-                
-                <div class="demo-container parent-relative" style="height: 160px; background-color: #e5e7eb;">
-                    <p style="margin: 0 0 5px 0; font-size: 12px; font-weight: bold;">Contenedor Padre (position: relative)</p>
-                    <div class="box-orange demo-absolute">Caja Naranja (Absolute)</div>
-                    <div class="box-blue">Caja Azul</div>
+            <div class="ejercicio">
+                <h3>3. Position: Absolute</h3>
+                <p>El contenedor padre tiene <code>position: relative</code>. La caja naranja tiene <code>position: absolute; top: 10px; right: 10px;</code> y la azul sube.</p>
+                <div class="contenedor-padre padre-relative" style="height: 150px;">
+                    <div class="box-orange absolute">Absolute</div>
+                    <div class="box-blue">Normal</div>
                 </div>
-            </article>
+            </div>
 
             <!-- 4. FIXED -->
-            <article class="seccion-posicion">
-                <h3>4. Position: Fixed (Fijo en la pantalla)</h3>
-                <p>El elemento se posiciona respecto a la ventana del navegador. Mira la <strong>Caja Naranja Fija</strong> abajo a la derecha flotando en la pantalla.</p>
-                
-                <div class="demo-container">
-                    <div class="box-blue">Caja Azul</div>
-                    <!-- Caja fija abajo a la derecha de la pantalla -->
-                    <div class="box-orange demo-fixed">Caja Naranja (Fixed)</div>
+            <div class="ejercicio">
+                <h3>4. Position: Fixed</h3>
+                <p>La caja verde aplica <code>position: fixed; bottom: 20px; right: 20px;</code> y se fija abajo a la derecha de tu pantalla.</p>
+                <div class="contenedor-padre">
+                    <div class="box-blue">Normal</div>
+                    <div class="box-green fixed">Fixed</div>
                 </div>
-            </article>
+            </div>
 
             <!-- 5. STICKY -->
-            <article class="seccion-posicion">
-                <h3>5. Position: Sticky (Pegajoso al hacer Scroll)</h3>
-                <p>La Caja Naranja se comporta como <code>relative</code> hasta que haces scroll y llega a <code>top: 10px</code>, momento en el que se "pega". (Haz scroll dentro del recuadro gris):</p>
-                
-                <div class="demo-container scroll-container" style="height: 180px; overflow-y: scroll; background-color: #f9fafb;">
-                    <p style="margin: 0 0 10px 0; color: #6b7280;">👇 Haz scroll hacia abajo en este recuadro 👇</p>
-                    <div class="box-orange demo-sticky">Caja Naranja (Sticky)</div>
-                    <div style="height: 300px; padding-top: 15px;">
-                        <p>Texto de prueba para generar espacio de desplazamiento...</p>
-                        <div class="box-blue">Caja Azul</div>
+            <div class="ejercicio">
+                <h3>5. Position: Sticky</h3>
+                <p>Haz scroll hacia abajo dentro del recuadro gris: la caja naranja tiene <code>position: sticky; top: 0;</code> y se queda pegada al borde superior.</p>
+                <div class="contenedor-scroll">
+                    <div class="box-orange sticky">Sticky</div>
+                    <p style="margin-top: 15px;">Desplaza la barra hacia abajo...</p>
+                    <div style="height: 300px; padding-top: 40px;">
+                        <div class="box-blue">Normal</div>
                     </div>
                 </div>
-            </article>
+            </div>
+
+            <!-- 6. Z-INDEX -->
+            <div class="ejercicio">
+                <h3>6. Z-Index</h3>
+                <p>La caja naranja tiene <code>z-index: 2</code> para sobreponerse encima de la azul (<code>z-index: 1</code>).</p>
+                <div class="contenedor-padre" style="height: 160px;">
+                    <div class="box-orange z-capa-alta">Z-Index 2</div>
+                    <div class="box-blue z-capa-baja">Z-Index 1</div>
+                </div>
+            </div>
 
         </aside>
 
         <aside class="secundario">
-            <h3>Propiedades Auxiliares</h3>
-            <p>Se usan junto con <code>position</code> para mover los cuadritos:</p>
-            <ul>
-                <li><code>top</code></li>
-                <li><code>bottom</code></li>
-                <li><code>left</code></li>
-                <li><code>right</code></li>
-                <li><code>z-index</code></li>
-            </ul>
+            <h3>Información</h3>
+            <p><strong>Asignatura:</strong> Programación en Internet I</p>
+            <p><strong>Tema:</strong> Posicionamiento CSS</p>
         </aside>
     </section>
     <footer>
