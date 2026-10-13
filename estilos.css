@@ -56,8 +56,8 @@ nav li ul {
     display: none;
     position: absolute;
     background-color: brown;
-    min-width: 180px;
-    z-index: 1000; /* Asegura que el menú flotante quede arriba */
+    min-width: 200px;
+    z-index: 1000;
 }
 
 nav li:hover ul {
@@ -86,10 +86,93 @@ section {
     border: 2px solid #cccccc;
 }
 
-/* Ajuste para que las imágenes y videos no sobresalgan del contenedor */
 .principal img, 
 .principal iframe {
     max-width: 100%;
+}
+
+/* ========================================================
+   ESTILOS PARA LOS CUADRITOS DE FREECODECAMP (POSITION)
+   ======================================================== */
+.seccion-posicion {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.demo-container {
+    border: 2px dashed #999999;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fafafa;
+    position: static;
+}
+
+/* Cuadrito Naranja (100px x 100px) */
+.box-orange {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d97706;
+}
+
+/* Cuadrito Azul (100px x 100px) */
+.box-blue {
+    width: 100px;
+    height: 100px;
+    background-color: lightskyblue;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0284c7;
+}
+
+/* Posición Relative */
+.demo-relative {
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+
+/* Contenedor Padre para Absolute */
+.parent-relative {
+    position: relative;
+}
+
+/* Posición Absolute */
+.demo-absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Posición Fixed (Abajo a la derecha flotante) */
+.demo-fixed {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 2000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Posición Sticky */
+.demo-sticky {
+    position: sticky;
+    top: 10px;
+    z-index: 10;
 }
 
 /* Estilos del pie de página */
