@@ -1,4 +1,6 @@
-/* Estilos Generales de la Página */
+/* ========================================================
+   ESTILOS GENERALES Y MAQUETACIÓN BASE
+   ======================================================== */
 * {
     box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Estilos del Encabezado */
+/* Encabezado */
 header {
     width: 100%;
     height: 180px;
@@ -20,7 +22,7 @@ header img {
     object-fit: cover;
 }
 
-/* Estilos del menú */
+/* Menú de navegación */
 nav {
     background-color: black;
 }
@@ -31,7 +33,7 @@ nav ul {
     padding: 0;
 }
 
-nav > ul {
+nav>ul {
     display: flex;
 }
 
@@ -51,7 +53,7 @@ nav a:hover {
     color: black;
 }
 
-/* Submenú */
+/* Submenús */
 nav li ul {
     display: none;
     position: absolute;
@@ -64,7 +66,7 @@ nav li:hover ul {
     display: block;
 }
 
-/* Cuerpo de la página */
+/* Estructura general */
 section {
     display: flex;
     gap: 20px;
@@ -86,103 +88,180 @@ section {
     border: 2px solid #cccccc;
 }
 
-.principal img, 
+.principal img,
 .principal iframe {
     max-width: 100%;
 }
 
-/* ========================================================
-   ESTILOS DE LAS CAJAS SEGÚN EL TUTORIAL DE FREECODECAMP
-   ======================================================== */
 
+/* ========================================================
+   ESTILOS DE CAJAS 100x100 PX (POSICIONES CSS - FREECODECAMP)
+   ======================================================== */
+.ejercicio,
 .paso-tutorial {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     padding: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 6px;
 }
 
+.contenedor-padre,
 .contenedor-fcc {
     border: 2px dashed #888888;
+    background-color: #f4f4f4;
     padding: 10px;
     margin-top: 10px;
-    background-color: #f9f9f9;
     position: static;
 }
 
-/* Caja 1 (Amarilla/Naranja) */
-.caja-fcc.caja-1 {
+/* Cajas 100px x 100px */
+.box-orange,
+.caja-1 {
     width: 100px;
     height: 100px;
-    background-color: #f59e0b;
-    color: #ffffff;
+    background-color: orange;
+    color: white;
     font-weight: bold;
-    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #d97706;
+    border: 1px solid #d97706;
 }
 
-/* Caja 2 (Azul) */
-.caja-fcc.caja-2 {
+.box-blue,
+.caja-2 {
     width: 100px;
     height: 100px;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: lightskyblue;
+    color: black;
     font-weight: bold;
-    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #0284c7;
+    border: 1px solid #0284c7;
 }
 
-/* Paso 1: Static */
+.box-green {
+    width: 100px;
+    height: 100px;
+    background-color: #22c55e;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #15803d;
+}
+
+/* Reglas CSS para cada posicionamiento */
+.static,
 .pos-static {
     position: static;
 }
 
-/* Paso 2: Relative */
+.relative,
 .pos-relative {
     position: relative;
     top: 30px;
     left: 40px;
 }
 
-/* Paso 3: Absolute */
+.padre-relative,
+.contenedor-padre-abs,
 .padre-relative {
     position: relative;
 }
 
+.absolute,
 .pos-absolute {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-/* Paso 4: Fixed */
+.fixed,
 .pos-fixed {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 20px;
+    right: 20px;
     z-index: 2000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Paso 5: Sticky */
 .contenedor-scroll {
-    height: 180px;
+    border: 2px dashed #888888;
+    background-color: #f4f4f4;
+    padding: 10px;
+    height: 160px;
     overflow-y: scroll;
 }
 
+.sticky,
 .pos-sticky {
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
-/* Pie de página */
+.z-capa-alta {
+    position: relative;
+    z-index: 2;
+}
+
+.z-capa-baja {
+    position: relative;
+    top: -40px;
+    left: 30px;
+    z-index: 1;
+}
+
+
+/* ========================================================
+   ESTILOS PARA COMUNIDAD DIGITAL (TABLAS Y LISTAS DL/DT/DD)
+   ======================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+dl {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #cccccc;
+}
+
+dt {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 10px;
+}
+
+dt:first-child {
+    margin-top: 0;
+}
+
+dd {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* ========================================================
+   PIE DE PÁGINA (FOOTER)
+   ======================================================== */
 footer {
     background-color: black;
     color: aliceblue;

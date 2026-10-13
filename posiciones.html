@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
-        <header> <img src="fondo.webp" alt="Header"></header>
+        <header> <img src="fondo.webp" alt="Porsche"></header>
     <nav>
         <ul>
             <li><a href="index.html">🏠 Inicio</a></li>
@@ -21,87 +21,97 @@
                     <li><a href="practica1_p2.html">Práctica uno</a></li>
                     <li><a href="posiciones.html">Práctica de posiciones</a></li>
                     <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <li><a href="comunidad.html">Comunidad digital</a></li>
                 </ul>
             </li>
             <li><a href="#">📚 Tercer parcial</a>
                 <ul>
                     <li><a href="practica1_p3.html">Práctica uno</a></li>
+                    
                 </ul>
             </li>
         </ul>
     </nav>
     <section>
         <aside class="principal">
-            <h2>Práctica de Posiciones CSS (Paso a Paso - freeCodeCamp) 📌</h2>
-            <p>Demostración paso a paso siguiendo el artículo tutorial de freeCodeCamp sobre el uso de la propiedad <code>position</code>.</p>
+            <h2>Práctica de Posiciones CSS (freeCodeCamp) 📌</h2>
+            <p>Demostración directa de las reglas de posición aplicadas a cajas de 100x100 px.</p>
 
             <hr style="border: 1px solid #cccccc; margin: 20px 0;">
 
-            <!-- PASO 1: STATIC -->
-            <div class="paso-tutorial">
-                <h3>Paso 1: Estado Inicial y <code>position: static</code></h3>
-                <p>Por defecto, los elementos HTML tienen posición estática y siguen el flujo normal del documento. Las propiedades <code>top</code>, <code>bottom</code>, <code>left</code> o <code>right</code> no tienen efecto aquí.</p>
-                <div class="contenedor-fcc">
-                    <div class="caja-fcc caja-1 pos-static">Caja 1</div>
-                    <div class="caja-fcc caja-2">Caja 2</div>
+            <!-- 1. STATIC -->
+            <div class="ejercicio">
+                <h3>1. Position: Static</h3>
+                <p>Las cajas se colocan una debajo de otra en el flujo normal.</p>
+                <div class="contenedor-padre">
+                    <div class="box-orange static">Static</div>
+                    <div class="box-blue">Normal</div>
                 </div>
             </div>
 
-            <!-- PASO 2: RELATIVE -->
-            <div class="paso-tutorial">
-                <h3>Paso 2: <code>position: relative</code></h3>
-                <p>Aplicamos <code>position: relative; top: 30px; left: 40px;</code> a la Caja 1. La caja se desplaza tomando como referencia su ubicación inicial sin alterar el espacio ocupado respecto a la Caja 2.</p>
-                <div class="contenedor-fcc" style="height: 250px;">
-                    <div class="caja-fcc caja-1 pos-relative">Caja 1</div>
-                    <div class="caja-fcc caja-2">Caja 2</div>
+            <!-- 2. RELATIVE -->
+            <div class="ejercicio">
+                <h3>2. Position: Relative</h3>
+                <p>La caja naranja aplica <code>position: relative; top: 30px; left: 40px;</code> moviéndose desde su posición original.</p>
+                <div class="contenedor-padre" style="height: 230px;">
+                    <div class="box-orange relative">Relative</div>
+                    <div class="box-blue">Normal</div>
                 </div>
             </div>
 
-            <!-- PASO 3: ABSOLUTE -->
-            <div class="paso-tutorial">
-                <h3>Paso 3: <code>position: absolute</code></h3>
-                <p>El contenedor contenedor-fcc tiene <code>position: relative</code>. Le asignamos a la Caja 1 <code>position: absolute; top: 10px; right: 10px;</code>. La Caja 1 sale del flujo natural y la Caja 2 se posiciona en el lugar donde antes estaba la Caja 1.</p>
-                <div class="contenedor-fcc padre-relative" style="height: 150px;">
-                    <div class="caja-fcc caja-1 pos-absolute">Caja 1</div>
-                    <div class="caja-fcc caja-2">Caja 2</div>
+            <!-- 3. ABSOLUTE -->
+            <div class="ejercicio">
+                <h3>3. Position: Absolute</h3>
+                <p>El contenedor padre tiene <code>position: relative</code>. La caja naranja tiene <code>position: absolute; top: 10px; right: 10px;</code> y la azul sube.</p>
+                <div class="contenedor-padre padre-relative" style="height: 150px;">
+                    <div class="box-orange absolute">Absolute</div>
+                    <div class="box-blue">Normal</div>
                 </div>
             </div>
 
-            <!-- PASO 4: FIXED -->
-            <div class="paso-tutorial">
-                <h3>Paso 4: <code>position: fixed</code></h3>
-                <p>Se le asigna a la Caja 1 <code>position: fixed; bottom: 15px; right: 15px;</code>. La caja se posiciona de forma fija con respecto a la ventana del navegador (viewport) y permanece ahí aunque se haga scroll.</p>
-                <div class="contenedor-fcc">
-                    <div class="caja-fcc caja-2">Caja 2</div>
-                    <!-- Caja 1 fija en la pantalla -->
-                    <div class="caja-fcc caja-1 pos-fixed">Caja 1 Fixed</div>
+            <!-- 4. FIXED -->
+            <div class="ejercicio">
+                <h3>4. Position: Fixed</h3>
+                <p>La caja verde aplica <code>position: fixed; bottom: 20px; right: 20px;</code> y se fija abajo a la derecha de tu pantalla.</p>
+                <div class="contenedor-padre">
+                    <div class="box-blue">Normal</div>
+                    <div class="box-green fixed">Fixed</div>
                 </div>
             </div>
 
-            <!-- PASO 5: STICKY -->
-            <div class="paso-tutorial">
-                <h3>Paso 5: <code>position: sticky</code></h3>
-                <p>La Caja 1 tiene <code>position: sticky; top: 0;</code>. Actúa como <code>relative</code> hasta que en el desplazamiento (scroll) alcanza el margen superior asignado y se "pega" temporalmente.</p>
-                <div class="contenedor-fcc contenedor-scroll">
-                    <div class="caja-fcc caja-1 pos-sticky">Caja 1 Sticky</div>
-                    <div class="caja-fcc caja-2" style="margin-top: 20px;">Caja 2</div>
-                    <div style="height: 300px; padding-top: 20px; color: #666666;">
-                        Desplaza la barra de desplazamiento hacia abajo para observar cómo la Caja 1 permanece fija arriba.
+            <!-- 5. STICKY -->
+            <div class="ejercicio">
+                <h3>5. Position: Sticky</h3>
+                <p>Haz scroll hacia abajo dentro del recuadro gris: la caja naranja tiene <code>position: sticky; top: 0;</code> y se queda pegada al borde superior.</p>
+                <div class="contenedor-scroll">
+                    <div class="box-orange sticky">Sticky</div>
+                    <div class="box-blue" style="margin-top: 15px;">Normal</div>
+                    <div style="height: 300px; padding-top: 20px; color: #666;">
+                        Desplaza la barra hacia abajo...
                     </div>
+                </div>
+            </div>
+
+            <!-- 6. Z-INDEX -->
+            <div class="ejercicio">
+                <h3>6. Z-Index</h3>
+                <p>La caja naranja tiene <code>z-index: 2</code> para sobreponerse encima de la azul (<code>z-index: 1</code>).</p>
+                <div class="contenedor-padre" style="height: 160px;">
+                    <div class="box-orange z-capa-alta">Z-Index 2</div>
+                    <div class="box-blue z-capa-baja">Z-Index 1</div>
                 </div>
             </div>
 
         </aside>
 
         <aside class="secundario">
-            <h3>Actividad 6</h3>
-            <p><strong>Materia:</strong> Programación en Internet I</p>
-            <p><strong>Profesor:</strong> Orlando Ayala Dominguez</p>
-            <p><strong>Fuente:</strong> Tutorial freeCodeCamp</p>
+            <h3>Información</h3>
+            <p><strong>Asignatura:</strong> Programación en Internet I</p>
+            <p><strong>Tema:</strong> Posicionamiento CSS</p>
         </aside>
     </section>
     <footer>
-        <img src="LOGOUDC.png" alt="Logo UDC">
+        <img src="LOGOUDC.png" alt="Logo Universidad de Colima">
         <div>
             <p><strong>Universidad de Colima</strong></p>
             <p>Bachillerato 8</p>
