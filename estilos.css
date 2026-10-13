@@ -1,4 +1,4 @@
-/* Estilos Generales */
+/* Estilos Generales de la Página */
 * {
     box-sizing: border-box;
 }
@@ -51,7 +51,7 @@ nav a:hover {
     color: black;
 }
 
-/* Estilos del submenú */
+/* Submenú */
 nav li ul {
     display: none;
     position: absolute;
@@ -64,7 +64,7 @@ nav li:hover ul {
     display: block;
 }
 
-/* Estilos para el cuerpo de la página */
+/* Cuerpo de la página */
 section {
     display: flex;
     gap: 20px;
@@ -92,75 +92,78 @@ section {
 }
 
 /* ========================================================
-   ESTILOS PARA LOS CUADRITOS DE FREECODECAMP (POSITION)
+   ESTILOS DE LAS CAJAS SEGÚN EL TUTORIAL DE FREECODECAMP
    ======================================================== */
-.seccion-posicion {
+
+.paso-tutorial {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-radius: 6px;
 }
 
-.demo-container {
-    border: 2px dashed #999999;
+.contenedor-fcc {
+    border: 2px dashed #888888;
     padding: 10px;
     margin-top: 10px;
-    background-color: #fafafa;
+    background-color: #f9f9f9;
     position: static;
 }
 
-/* Cuadrito Naranja (100px x 100px) */
-.box-orange {
+/* Caja 1 (Amarilla/Naranja) */
+.caja-fcc.caja-1 {
     width: 100px;
     height: 100px;
-    background-color: orange;
-    color: white;
+    background-color: #f59e0b;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 12px;
-    text-align: center;
+    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #d97706;
+    border: 2px solid #d97706;
 }
 
-/* Cuadrito Azul (100px x 100px) */
-.box-blue {
+/* Caja 2 (Azul) */
+.caja-fcc.caja-2 {
     width: 100px;
     height: 100px;
-    background-color: lightskyblue;
-    color: black;
+    background-color: #38bdf8;
+    color: #0f172a;
     font-weight: bold;
-    font-size: 12px;
-    text-align: center;
+    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #0284c7;
+    border: 2px solid #0284c7;
 }
 
-/* Posición Relative */
-.demo-relative {
+/* Paso 1: Static */
+.pos-static {
+    position: static;
+}
+
+/* Paso 2: Relative */
+.pos-relative {
     position: relative;
     top: 30px;
     left: 40px;
 }
 
-/* Contenedor Padre para Absolute */
-.parent-relative {
+/* Paso 3: Absolute */
+.padre-relative {
     position: relative;
 }
 
-/* Posición Absolute */
-.demo-absolute {
+.pos-absolute {
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-/* Posición Fixed (Abajo a la derecha flotante) */
-.demo-fixed {
+/* Paso 4: Fixed */
+.pos-fixed {
     position: fixed;
     bottom: 15px;
     right: 15px;
@@ -168,14 +171,18 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Posición Sticky */
-.demo-sticky {
-    position: sticky;
-    top: 10px;
-    z-index: 10;
+/* Paso 5: Sticky */
+.contenedor-scroll {
+    height: 180px;
+    overflow-y: scroll;
 }
 
-/* Estilos del pie de página */
+.pos-sticky {
+    position: sticky;
+    top: 0;
+}
+
+/* Pie de página */
 footer {
     background-color: black;
     color: aliceblue;
