@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Conversor de temperaturas</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header> <img src="fondo.webp" alt="Porsche"></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="#">👤 Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Segunda parcial</a>
+                <ul>
+                    <li><a href="practica1_p2.html">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <li><a href="comunidad.html">Comunidad digital</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Tercer parcial</a>
+                <ul>
+                    <li><a href="practica1_p3.html">Práctica uno</a></li>
+                    <li><a href="comunidad.html">Comunidad digital</a></li>
+                    <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <aside class="principal">
+            <h2>Conversor de temperaturas 🌡️</h2>
+            <p>Ingresa un valor numérico, selecciona la unidad de conversión deseada y presiona el botón para calcular el resultado.</p>
+            
+            <div class="ejercicio">
+                <div class="form-group">
+                    <label for="temperatura">Temperatura:</label>
+                    <input type="number" id="temperatura" step="any" placeholder="Ej. 30" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoConversion">Tipo de conversión:</label>
+                    <select id="tipoConversion" class="form-select">
+                        <option value="c-f">Celsius a Fahrenheit</option>
+                        <option value="f-c">Fahrenheit a Celsius</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <button id="btnConvertir" class="btn-convertir">Convertir</button>
+                </div>
+
+                <div id="resultado"></div>
+            </div>
+        </aside>
+
+        <aside class="secundario">
+            <h3>Información de la Actividad</h3>
+            <p><strong>Asignatura:</strong> Programación en Internet I</p>
+            <p><strong>Parcial:</strong> Tercer parcial</p>
+            <p><strong>Tema:</strong> JavaScript, Variables, Funciones y Eventos</p>
+        </aside>
+    </section>
+
+    <footer>
+        <img src="LOGOUDC.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+
+    <script src="temperaturas.js"></script>
+    </body>
+</html>
