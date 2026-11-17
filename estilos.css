@@ -316,6 +316,28 @@ dd {
 }
 
 
+
+/* ========================================================
+   ESTILOS PARA SISTEMA DE CALIFICACIONES
+   ======================================================== */
+.estado-aprobado {
+    display: inline-block;
+    background-color: #16a34a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.estado-reprobado {
+    display: inline-block;
+    background-color: #dc2626;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
 /* ========================================================
    PIE DE PÁGINA (FOOTER)
    ======================================================== */

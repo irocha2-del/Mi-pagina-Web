@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sistema de evaluación de calificaciones</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header> <img src="fondo.webp" alt="Porsche"></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="#">👤 Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Segunda parcial</a>
+                <ul>
+                    <li><a href="practica1_p2.html">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <li><a href="comunidad.html">Comunidad digital</a></li>
+                </ul>
+            </li>
+            <li><a href="#">📚 Tercer parcial</a>
+                <ul>
+                    <li><a href="practica1_p3.html">Práctica uno</a></li>
+                    <li><a href="comunidad.html">Comunidad digital</a></li>
+                    <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
+                    <li><a href="calificaciones.html">Sistema de calificaciones</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <aside class="principal">
+            <h2>Sistema de evaluación de calificaciones 📝</h2>
+            <p>Ingresa el nombre del estudiante y sus tres calificaciones (en escala de 0 a 10) para calcular su promedio, determinar si aprobó o reprobó y mostrar su observación académica.</p>
+            
+            <div class="ejercicio">
+                <div class="form-group">
+                    <label for="nombre">Nombre del estudiante:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ana López" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="calificacion1">Primera calificación:</label>
+                    <input type="number" id="calificacion1" step="any" min="0" max="10" placeholder="Ej. 8.5" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="calificacion2">Segunda calificación:</label>
+                    <input type="number" id="calificacion2" step="any" min="0" max="10" placeholder="Ej. 9.0" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="calificacion3">Tercera calificación:</label>
+                    <input type="number" id="calificacion3" step="any" min="0" max="10" placeholder="Ej. 8.0" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <button id="btnCalcular" class="btn-convertir">Calcular promedio</button>
+                </div>
+
+                <div id="resultado"></div>
+            </div>
+        </aside>
+
+        <aside class="secundario">
+            <h3>Información de la Actividad</h3>
+            <p><strong>Asignatura:</strong> Programación en Internet I</p>
+            <p><strong>Parcial:</strong> Tercer parcial</p>
+            <p><strong>Tema:</strong> JavaScript, Validación de Datos y Condicionales</p>
+            <hr style="border: 1px solid #cccccc; margin: 15px 0;">
+            <h4>Escala de Observaciones</h4>
+            <ul>
+                <li><strong>9 a 10:</strong> Excelente desempeño</li>
+                <li><strong>8 a 8.9:</strong> Muy buen desempeño</li>
+                <li><strong>7 a 7.9:</strong> Buen desempeño</li>
+                <li><strong>6 a 6.9:</strong> Desempeño suficiente</li>
+                <li><strong>Menor que 6:</strong> Necesita mejorar</li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <img src="LOGOUDC.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+
+    <script src="calificaciones.js"></script>
+    </body>
+</html>
